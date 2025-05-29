@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penzion u vody</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway&display=swap" rel="stylesheet">
+
+    <!-- Naše vlastní CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="header__contact">
+                <a class="header__contact-email" href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
+                <span class="header__contact-phone">Tel. +420 123 456 789</span>
+            </div>
+
+            <div class="header__inner">
+                <div class="header__left">
+                    <div class="header__logo">Penzion u vody</div>
+                    <div class="header__address">
+                        <img class="header__stars" src="images/3stars.svg" alt="3 hvězdičky">
+                        Ulice 42, Městečko
+                    </div>
+                </div>
+
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/index/" class="menu__link">Úvod</a></li>
+                        <li class="menu__item"><a href="/galerie/" class="menu__link">Pokoje</a></li>
+                        <li class="menu__item"><a href="/vybaveni/" class="menu__link">Vybavení</a></li>
+                        <li class="menu__item"><a href="/galerie/" class="menu__link">Galerie</a></li>
+                        <li class="menu__item"><a href="/kontakt/" class="menu__link">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__image"></div>
+        </header>
+
+       <main class="main">
+       
+
+			<!-- Galerie -->
+			<section class="contact">
+
+				<div class="contact__grid">
+					<div class="contact__grid-item">
+						<h1>Kontakt</h1>
+
+						<p>Máte-li jakýkoli dotaz ohledně vaší rezervace, neváhejte kontaktovat naše rezervační oddělení. Využít můžete buď kontaktní formulář níže na stránce nebo nám zavolejte nebo napište email.</p>
+
+						<h2 class="contact__title">Adresa penzionu</h2>
+
+						<p>
+							<strong>Penzion u vody</strong><br>
+							Ulice 42<br>
+							9887 65 Městečko
+						</p>
+
+						<h2 class="contact__title">Recepce a rezervace</h2>
+
+						<p>
+							<strong>Telefon:</strong> +420 123 456 789<br>
+							<strong>E-mail:</strong> <a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
+						</p>
+					</div>
+
+					<div class="contact__grid-item">
+
+						<h2>Kontaktní formulář</h2>
+
+						<form action="" method="post">
+
+							<div class="form-field">
+								<label for="jmeno" class="required">Jméno a příjmení</label>
+								<input type="text" name="jmeno" id="jmeno" required>
+							</div>
+
+							<div class="form-field">
+								<label for="email" class="required">E-mail</label>
+								<input type="email" name="email" id="email" required>
+							</div>
+
+							<div class="form-field">
+								<label for="telefon">Telefon</label>
+								<input type="tel" name="telefon" id="telefon">
+							</div>
+
+							<div class="form-field">
+								<label for="zprava" class="required">Zpráva</label>
+								<textarea name="zprava" id="zprava" rows="6" required></textarea>
+							</div>
+
+							<button class="button" type="submit">Odeslat zprávu</button>
+
+						</form>
+
+					</div>
+				</div>
+
+			</section>
+			<!-- konec .contact -->
+
+
+			<section class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86108.11109072906!2d13.618535884116946!3d47.58960582362411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4771366f6e414663%3A0x16c165596a26c1ad!2sHallstatt%2C%20Rakousko!5e0!3m2!1scs!2scz!4v1619614092892!5m2!1scs!2scz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+			</section>
+			<!-- konec .map -->
+	
+
+       </main>
+
+        <footer class="footer">
+            <div class="footer__grid">
+                <div class="footer__grid-column">
+                    <h2>Obce v okolí</h2>
+                    <ul class="footer__links">
+                        <li><a href="#">Vesnička pod Horou</a></li>
+                        <li><a href="#">Stará Osada</a></li>
+                        <li><a href="#">Kamenný Mlýn</a></li>
+                        <li><a href="#">Horní Vesnice</a></li>
+                        <li><a href="#">Slunečný Dvůr</a></li>
+                        <li><a href="#">Jezerní Město</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__grid-column">
+                    <h2>Tipy na výlety</h2>
+                    <ul class="footer__links">
+                        <li><a href="#">Horská pevnost</a></li>
+                        <li><a href="#">Projížďka po jezeře</a></li>
+                        <li><a href="#">Skalní město</a></li>
+                        <li><a href="#">Solná jeskyně</a></li>
+                        <li><a href="#">Lanovkou na vrchol</a></li>
+                        <li><a href="#">Na kole okolo jezera</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__grid-column">
+                    <h2>Kontakt</h2>
+                    <p>
+                        <span class="footer__title">Telefon:</span><br>
+                        +420 123 456 789
+                    </p>
+                    <p>
+                        <span class="footer__title">E-mail:</span><br>
+                        <a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                &copy;2024, autor
+            </div>
+        </footer>
+    </div> <!-- .wrapper -->
+</body>
+</html>
+
+

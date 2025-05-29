@@ -1,0 +1,459 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+:root {
+	--grey-100: hsl(0, 0%, 10%);
+	--grey-200: hsl(0, 0%, 20%);
+	--grey-300: hsl(0, 0%, 30%);
+	--grey-400: hsl(0, 0%, 40%);
+	--grey-500: hsl(0, 0%, 50%);
+	--grey-600: hsl(0, 0%, 60%);
+	--grey-700: hsl(0, 0%, 70%);
+	--grey-800: hsl(0, 0%, 80%);
+	--grey-900: hsl(0, 0%, 90%);
+
+	--primary: #004769;
+	--accent: #fc0;
+
+	--font-default: 'Open Sans', sans-serif;
+	--font-special: 'Raleway', sans-serif;
+
+	--spacer: 1rem;
+	--spacer-quarter: calc(var(--spacer) / 4);
+	--spacer-half: calc(var(--spacer) / 2);
+	--spacer-bigger: calc(var(--spacer) * 1.5);
+	--spacer-double: calc(var(--spacer) * 2);
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-default);
+	background-color: var(--grey-900)
+}
+
+.wrapper {
+	max-width: 66rem;
+	margin: 0 auto;
+	background-color: white;
+}
+
+h1, h2, h3 {
+	font-family: var(--font-special);
+	font-weight: normal;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+
+:is(h1, h2, h3):first-child {
+	margin-top: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+img {
+	width: 100%;
+}
+
+section {
+	padding: var(--spacer-double) var(--spacer-bigger);
+}
+
+/*
+ **************************************
+	Univerzální 3 sloupcový grid
+ **************************************
+*/
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacer-bigger);
+}
+
+.grid__column--double {
+	grid-column: span 2;
+}
+
+/*
+ **************************************
+	Tlačítko
+ **************************************
+*/
+
+.button {
+	padding: var(--spacer-half) var(--spacer-bigger);
+	background-color: var(--accent);
+	font-size: 1rem;
+	border: 1px solid black;
+	cursor: pointer;
+}
+
+
+/*
+ **************************************
+	HEADER
+ **************************************
+*/
+
+.header__contact {
+	padding: var(--spacer-half) var(--spacer-bigger);
+	font-size: 14px;
+	text-align: right;
+	background-color: var(--grey-100);
+	color: white;
+}
+
+.header__contact-email {
+	margin-right: var(--spacer);
+}
+
+.header__contact a {
+	color: white;
+}
+
+.header__contact a:hover,
+.header__contact a:focus {
+	color: var(--accent);
+}
+
+
+.header__inner {
+	padding: var(--spacer) var(--spacer-bigger);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.header__logo {
+	font-family: var(--font-special);
+	font-size: 36px;
+	font-weight: bold;
+	flex: 0 0 100%;
+	margin-bottom: var(--spacer-half);
+}
+
+.header__stars {
+	height: 1em;
+	width: auto;
+	margin-right: var(--spacer-half);
+	vertical-align: baseline;
+}
+
+.header__image {
+	min-height: 300px;
+	background: url(./../images/header-bg.jpg) no-repeat right center/cover;
+}
+
+/*
+ **************************************
+	MENU
+ **************************************
+*/
+
+.menu__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.menu__item {
+	margin: 0;
+	padding: 0;
+}
+
+.menu__item:not(:last-child) {
+	border-right: 1px solid var(--grey-900);
+}
+
+.menu__link {
+	display: block;
+	padding: var(--spacer-half) var(--spacer);
+	font-family: var(--font-special);
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+}
+
+.menu__link:hover {
+	background-color: var(--accent);
+}
+
+
+
+/*
+ **************************************
+	ABOUT - o penzionu
+ **************************************
+*/
+
+.about {
+	box-shadow: inset 0 0 50px var(--grey-900);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacer-bigger);
+}
+
+.about__content {
+	grid-column: span 2;
+}
+
+
+/*
+ **************************************
+	TESTIMONIAL - reference klientů
+ **************************************
+*/
+
+.testimonial__bubble {
+	border-radius: var(--spacer);
+	padding: var(--spacer);
+	background-color: var(--primary);
+	color: white;
+	position: relative;
+	margin-bottom: var(--spacer-bigger);
+}
+
+.testimonial__bubble::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 20px;
+	width: var(--spacer);
+	height: var(--spacer);
+	border-right: var(--spacer) solid var(--primary);
+	border-bottom: var(--spacer) solid transparent;
+}
+
+.testimonial__bubble :first-child {
+	margin-top: 0;
+}
+
+.testimonial__bubble :last-child {
+	margin-bottom: 0;
+}
+
+.testimonial__score {
+	font-size: 1.5rem;
+	margin-bottom: 0;
+}
+
+.testimonial__name {
+	color: var(--grey-500);
+	font-size: 14px;
+	padding-left: var(--spacer);
+}
+
+
+/*
+ **************************************
+	ROOMS-PREVIEW - přehled pokojů na HP
+ **************************************
+*/
+
+.room-preview p {
+	margin-bottom: 0;
+}
+
+
+/*
+ **************************************
+	ROOMS - podrobný popis pokojů
+ **************************************
+*/
+
+.room {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacer-bigger);
+}
+
+.room:not(:last-child) {
+	margin-bottom: var(--spacer-double);
+}
+
+.room__description {
+	grid-column: span 2;
+}
+
+
+/*
+ **************************************
+	SERVICES - Služby a vybavení
+ **************************************
+*/
+.services__item {
+	display: flex;
+	align-items: center;
+}
+
+.services__icon {
+	width: 60px;
+	height: 60px;
+	margin-right: var(--spacer);
+	border-radius: 50%;
+	background-color: var(--accent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.services__icon img {
+	width: 30px;
+	height: 30px;
+	object-fit: contain;
+}
+
+.services__description {
+	margin: 0;
+}
+
+.services__description span {
+	display: block;
+	color: var(--grey-500);
+	font-size: 13px;
+}
+
+
+.services__title {
+	margin-top: calc(var(--spacer) * 3);
+}
+
+
+
+/*
+ **************************************
+	GALLERY
+ **************************************
+*/
+
+.gallery__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+	gap: 1px;
+}
+
+.gallery__item {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery__item:nth-child(5n+2) {
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+
+/*
+ **************************************
+	KONTAKT
+ **************************************
+*/
+
+.contact__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--spacer-bigger);
+}
+
+.contact__title {
+	margin-top: var(--spacer-double);
+}
+
+
+/*
+ **************************************
+	MAPA
+ **************************************
+*/
+.map {
+	padding: 0;
+}
+
+
+/*
+ **************************************
+	FORMULAR
+ **************************************
+*/
+
+.form-field {
+	margin-bottom: var(--spacer);
+}
+
+.form-field label {
+	display: block;
+	color: var(--grey-500);
+	font-size: 15px;
+	margin-bottom: var(--spacer-half);
+}
+
+.form-field :is(input, textarea, select) {
+	width: 100%;
+	padding: var(--spacer-half);
+	border: 1px solid var(--grey-700);
+	border-radius: 4px;
+}
+
+.required:after {
+	content: "*";
+	color: red;
+	margin-left: 4px;
+}
+
+
+/*
+ **************************************
+	FOOTER
+ **************************************
+*/
+
+.footer a {
+	color: white;
+}
+
+.footer a:hover,
+.footer a:focus {
+	color: var(--accent);
+}
+
+.footer__grid {
+	padding: var(--spacer-double) var(--spacer-bigger);
+	background-color: var(--grey-100);
+	color: white;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--spacer-bigger);
+}
+
+.footer__copyright {
+	padding: var(--spacer) var(--spacer-bigger);
+	font-size: 14px;
+	text-align: center;
+	background-color: var(--grey-900);
+	color: var(--grey-500);
+}
+
+.footer__links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer__links li:not(:last-child) {
+	margin-bottom: var(--spacer-quarter);
+}
+
+.footer__title {
+	color: var(--grey-700);
+}
