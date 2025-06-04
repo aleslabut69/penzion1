@@ -1,182 +1,132 @@
----
-layout: main.njk
-title: vybaveni
----
-		<!-- ↑↑↑ odtud nahoru je vrchní část společná pro všechny stránky na webu -->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<header class="topbar">
+  <div class="topbar__contact">
+    <a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a> &nbsp; Tel. +420 123 456 789
+  </div>
+</header>
+<div class="header">
+  <div class="header__title">
+    <h1>Penzion u vody</h1>
+    <p class="stars">★★★</p>
+    <p>Ulice 42, Městečko</p>
+  </div>
+  <nav class="nav">
+    <a href="index.html">Úvod</a>
+    <a href="pokoje.html">Pokoje</a>
+    <a href="vybaveni.html">Vybavení</a>
+    <a href="galerie.html">Galerie</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</div>
+<hr>
+<section style="padding: 40px 60px;">
+  <h2 style="text-align: center;">Vybavení a služby</h2>
+  <p style="text-align: center; max-width: 800px; margin: 10px auto 40px;">
+    Naše pokoje jsou vybaveny tak, abyste si svůj pobyt užili v maximálním pohodlí. K dispozici je moderní vybavení, bohaté služby a řada volnočasových aktivit.
+  </p>
 
-
-
-			<!-- Pokoje -->
-			<section class="services">
-				<h1>Vybavení a služby</h1>
-
-				<div class="grid">
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/handshake-alt.svg" alt="">
-						</div>
-						<p class="services__description">Konferenční místnost</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/tv.svg" alt="">
-						</div>
-						<p class="services__description">TV místnost</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/coins.svg" alt="">
-						</div>
-						<p class="services__description">
-							Směnárna
-							<span>ve vzdálenosti 100 m</span>
-						</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/shopping-bag.svg" alt="">
-						</div>
-						<p class="services__description">
-							Nákupní centrum
-							<span>ve vzdálenosti 1 km</span>
-						</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/parking.svg" alt="">
-						</div>
-						<p class="services__description">Parkování v areálu</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/wifi.svg" alt="">
-						</div>
-						<p class="services__description">Wi-fi</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/campfire.svg" alt="">
-						</div>
-						<p class="services__description">Venkovní ohniště a grill</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/smoking-ban.svg" alt="">
-						</div>
-						<p class="services__description">Nekuřácké prostředí</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/dog.svg" alt="">
-						</div>
-						<p class="services__description">
-							Domácí mazlíčci
-							<span>za poplatek 100 Kč</span>
-						</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/washer.svg" alt="">
-						</div>
-						<p class="services__description">Pračka</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/dryer.svg" alt="">
-						</div>
-						<p class="services__description">Sušička</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/language.svg" alt="">
-						</div>
-						<p class="services__description">Vícejazyčný personál</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/bicycle.svg" alt="">
-						</div>
-						<p class="services__description">Úschovna kol</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/skiing.svg" alt="">
-						</div>
-						<p class="services__description">Půjčovna lyží</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/swimmer.svg" alt="">
-						</div>
-						<p class="services__description">Vnitřní bazén</p>
-					</div>
-
-				</div>
-
-
-				<h2 class="services__title">Vybavení na pokojích</h2>
-
-				<div class="grid">
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/air-conditioner.svg" alt="">
-						</div>
-						<p class="services__description">Klimatizace</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/tv.svg" alt="">
-						</div>
-						<p class="services__description">TV</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/lock-alt.svg" alt="">
-						</div>
-						<p class="services__description">Bezpečnostní schránka</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/wifi.svg" alt="">
-						</div>
-						<p class="services__description">Wi-fi</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/hot-tub.svg" alt="">
-						</div>
-						<p class="services__description">Koupelna s vanou</p>
-					</div>
-
-					<div class="grid__column services__item">
-						<div class="services__icon">
-							<img src="/images/icons/fish-cooked.svg" alt="">
-						</div>
-						<p class="services__description">Pokojová služba</p>
-					</div>
-
-				</div>
-
-
-			</section>
-			<!-- konec .services -->
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1100px; margin: 0 auto;">
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/wifi.svg" alt="Wi-Fi" style="width: 48px; height: 48px;">
+      <p>Wi-Fi zdarma</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/tv.svg" alt="TV" style="width: 48px; height: 48px;">
+      <p>TV na pokoji</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/air-conditioner.svg" alt="Klimatizace" style="width: 48px; height: 48px;">
+      <p>Klimatizace</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/hot-tub.svg" alt="Vířivka" style="width: 48px; height: 48px;">
+      <p>Vířivka</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/parking.svg" alt="Parkování" style="width: 48px; height: 48px;">
+      <p>Parkování zdarma</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/washer.svg" alt="Pračka" style="width: 48px; height: 48px;">
+      <p>Pračka</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/dryer.svg" alt="Sušička" style="width: 48px; height: 48px;">
+      <p>Sušička</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/dog.svg" alt="Zvířata vítána" style="width: 48px; height: 48px;">
+      <p>Zvířata vítána</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/smoking-ban.svg" alt="Nekuřácké pokoje" style="width: 48px; height: 48px;">
+      <p>Nekuřácké pokoje</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/lock-alt.svg" alt="Bezpečnost" style="width: 48px; height: 48px;">
+      <p>Bezpečný vstup</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/language.svg" alt="Jazyky" style="width: 48px; height: 48px;">
+      <p>Personál mluví AJ/NJ</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/bicycle.svg" alt="Kola" style="width: 48px; height: 48px;">
+      <p>Úschovna kol</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/skiing.svg" alt="Lyže" style="width: 48px; height: 48px;">
+      <p>Lyžařské vybavení</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/swimmer.svg" alt="Koupání" style="width: 48px; height: 48px;">
+      <p>Koupání v okolí</p>
+    </div>
+    <div style="width: 120px; text-align: center;">
+      <img src="images/icons/campfire.svg" alt="Ohniště" style="width: 48px; height: 48px;">
+      <p>Ohniště a gril</p>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer__column">
+    <h4>Obce v okolí</h4>
+    <ul>
+      <li>Vesnička pod Horou</li>
+      <li>Stará Osada</li>
+      <li>Kamenný Mlýn</li>
+      <li>Horní Vesnice</li>
+      <li>Slunečný Dvůr</li>
+      <li>Jezerní Město</li>
+    </ul>
+  </div>
+  <div class="footer__column">
+    <h4>Tipy na výlety</h4>
+    <ul>
+      <li>Horská pevnost</li>
+      <li>Projížďka po jezeře</li>
+      <li>Skalní město</li>
+      <li>Solná jeskyně</li>
+      <li>Lanovkou na vrchol</li>
+      <li>Na kole okolo jezera</li>
+    </ul>
+  </div>
+  <div class="footer__column">
+    <h4>Kontakt</h4>
+    <p>Telefon:<br>+420 123 456 789</p>
+    <p>E-mail:<br><a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a></p>
+  </div>
+</footer>
+</body>
+</html>
+	
 
 

@@ -1,33 +1,119 @@
----
-layout: main.njk
-title: Galerie
----
-		
-			<!-- Galerie -->
-			<section class="gallery">
-				<h1>Galerie</h1>
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Document</title>
+	<style>
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 15px;
+			padding: 20px 60px;
+			background-color: #f9f9f9;
+		}
+		.gallery-item {
+			overflow: hidden;
+			border-radius: 8px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.gallery-item:hover {
+			transform: scale(1.05);
+			box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+			cursor: pointer;
+		}
+		.gallery-item img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+		@media (max-width: 800px) {
+			.gallery {
+				grid-template-columns: repeat(2, 1fr);
+				padding: 20px 30px;
+			}
+		}
+		@media (max-width: 480px) {
+			.gallery {
+				grid-template-columns: 1fr;
+				padding: 10px 15px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header class="topbar">
+		<div class="topbar__contact">
+			<a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a> &nbsp; Tel. +420 123 456 789
+		</div>
+	</header>
+	<div class="header">
+		<div class="header__title">
+			<h1>Penzion u vody</h1>
+			<p class="stars">★★★</p>
+			<p>Ulice 42, Městečko</p>
+		</div>
+		<nav class="nav">
+			<a href="index.html">Úvod</a>
+			<a href="pokoje.html">Pokoje</a>
+			<a href="vybaveni.html">Vybavení</a>
+			<a href="galerie.html">Galerie</a>
+			<a href="kontakt.html">Kontakt</a>
+		</nav>
+	</div>
+	<hr>
 
-				<div class="gallery__grid">
-					<img class="gallery__item" src="/images/galerie01.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie02.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie03.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie04.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie05.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie06.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie07.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie08.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie09.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie10.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie11.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie12.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie13.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie14.jpg" alt="">
-					<img class="gallery__item" src="/images/galerie15.jpg" alt="">
-				</div>
-			</section>
-			<!-- konec .gallery -->
+	<div class="gallery">
+		<div class="gallery-item"><img src="images/galerie01.jpg" alt="Galerie 01" /></div>
+		<div class="gallery-item"><img src="images/galerie02.jpg" alt="Galerie 02" /></div>
+		<div class="gallery-item"><img src="images/galerie03.jpg" alt="Galerie 03" /></div>
+		<div class="gallery-item"><img src="images/galerie04.jpg" alt="Galerie 04" /></div>
+		<div class="gallery-item"><img src="images/galerie05.jpg" alt="Galerie 05" /></div>
+		<div class="gallery-item"><img src="images/galerie06.jpg" alt="Galerie 06" /></div>
+		<div class="gallery-item"><img src="images/galerie07.jpg" alt="Galerie 07" /></div>
+		<div class="gallery-item"><img src="images/galerie08.jpg" alt="Galerie 08" /></div>
+		<div class="gallery-item"><img src="images/galerie09.jpg" alt="Galerie 09" /></div>
+		<div class="gallery-item"><img src="images/galerie10.jpg" alt="Galerie 10" /></div>
+		<div class="gallery-item"><img src="images/galerie11.jpg" alt="Galerie 11" /></div>
+		<div class="gallery-item"><img src="images/galerie12.jpg" alt="Galerie 12" /></div>
+		<div class="gallery-item"><img src="images/galerie13.jpg" alt="Galerie 13" /></div>
+		<div class="gallery-item"><img src="images/galerie14.jpg" alt="Galerie 14" /></div>
+		<div class="gallery-item"><img src="images/galerie15.jpg" alt="Galerie 15" /></div>
+	</div>
 
-
-
-
-		
+	<footer class="footer">
+		<div class="footer__column">
+			<h4>Obce v okolí</h4>
+			<ul>
+				<li>Vesnička pod Horou</li>
+				<li>Stará Osada</li>
+				<li>Kamenný Mlýn</li>
+				<li>Horní Vesnice</li>
+				<li>Slunečný Dvůr</li>
+				<li>Jezerní Město</li>
+			</ul>
+		</div>
+		<div class="footer__column">
+			<h4>Tipy na výlety</h4>
+			<ul>
+				<li>Horská pevnost</li>
+				<li>Projížďka po jezeře</li>
+				<li>Skalní město</li>
+				<li>Solná jeskyně</li>
+				<li>Lanovkou na vrchol</li>
+				<li>Na kole okolo jezera</li>
+			</ul>
+		</div>
+		<div class="footer__column">
+			<h4>Kontakt</h4>
+			<p>Telefon:<br />+420 123 456 789</p>
+			<p>
+				E-mail:<br />
+				<a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>

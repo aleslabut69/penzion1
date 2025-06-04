@@ -1,40 +1,171 @@
----
-layout: main.njk
-title: Pokoje
----
-	
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/style.css" />
+	<title>Document</title>
+	<style>
+		.rooms {
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 60px;
+			gap: 30px;
+			flex-wrap: wrap;
+			background-color: #f9f9f9;
+		}
+		.room {
+			background: white;
+			border-radius: 10px;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			flex: 1 1 30%;
+			display: flex;
+			flex-direction: column;
+			overflow: hidden;
+			transition: box-shadow 0.3s ease;
+			min-width: 280px;
+			max-width: 350px;
+		}
+		.room:hover {
+			box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+		}
+		.room img {
+			width: 100%;
+			height: auto;
+			display: block;
+			object-fit: cover;
+			flex-shrink: 0;
+		}
+		.room-content {
+			padding: 15px 20px;
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		.room-content h3 {
+			margin: 0 0 10px 0;
+			font-size: 1.4rem;
+			color: #222;
+		}
+		.room-content p {
+			flex-grow: 1;
+			font-size: 0.95rem;
+			color: #555;
+			margin-bottom: 15px;
+		}
+		.room-content a {
+			display: inline-block;
+			background-color: #222;
+			color: white;
+			text-decoration: none;
+			padding: 10px 15px;
+			border-radius: 5px;
+			font-weight: bold;
+			text-align: center;
+			transition: background-color 0.3s ease;
+		}
+		.room-content a:hover {
+			background-color: #444;
+		}
 
-			<!-- Pokoje -->
-			<section class="rooms">
-				<h1>Pokoje</h1>
+		@media (max-width: 900px) {
+			.rooms {
+				justify-content: center;
+			}
+		}
+		@media (max-width: 600px) {
+			.rooms {
+				flex-direction: column;
+				padding: 20px 30px;
+			}
+			.room {
+				max-width: 100%;
+				min-width: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header class="topbar">
+		<div class="topbar__contact">
+			<a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a> &nbsp; Tel. +420 123 456 789
+		</div>
+	</header>
+	<div class="header">
+		<div class="header__title">
+			<h1>Penzion u vody</h1>
+			<p class="stars">★★★</p>
+			<p>Ulice 42, Městečko</p>
+		</div>
+		<nav class="nav">
+			<a href="index.html">Úvod</a>
+			<a href="pokoje.html">Pokoje</a>
+			<a href="vybaveni.html">Vybavení</a>
+			<a href="galerie.html">Galerie</a>
+			<a href="kontakt.html">Kontakt</a>
+		</nav>
+	</div>
+	<hr>
 
-				<div class="room">
-					<img class="room__image" src="/images/room1.jpg" alt="Pokoj 1">
-					<div class="room__description">
-						<h2>Velký pokoj s výhledem na jezero</h2>
-						<p>Stal zastavit stylovou smrtelníky zárodky, kvůli pól s jih vyrůstal výše lidové, vyčkává chtěla výstavě africkými, menší od zuby běžně smyšlená že prosklené. Chyba divize vyniká či tvar rostlé důležití změnami nejde snu teploty, novou, do sekyra mi kořist informuje písek.</p>
-						<button class="button">Rezervovat - 1900 Kč/noc</button>
-					</div>
-				</div>
+	<div class="rooms">
+		<div class="room">
+			<img src="images/room1.jpg" alt="Pokoj Standard" />
+			<div class="room-content">
+				<h3>Pokoj Standard</h3>
+				<p>Útulný pokoj s manželskou postelí, vlastní koupelnou a výhledem do zahrady.</p>
+				<a href="kontakt.html">Rezervovat</a>
+			</div>
+		</div>
+		<div class="room">
+			<img src="images/room2.jpg" alt="Pokoj Deluxe" />
+			<div class="room-content">
+				<h3>Pokoj Deluxe</h3>
+				<p>Prostorný pokoj s manželskou postelí, balkónem a minibarem.</p>
+				<a href="kontakt.html">Rezervovat</a>
+			</div>
+		</div>
+		<div class="room">
+			<img src="images/room3.jpg" alt="Apartmán" />
+			<div class="room-content">
+				<h3>Apartmán</h3>
+				<p>Luxusní apartmán se samostatným obývacím pokojem a kuchyňkou.</p>
+				<a href="kontakt.html">Rezervovat</a>
+			</div>
+		</div>
+	</div>
 
-				<div class="room">
-					<img class="room__image" src="/images/room2.jpg" alt="Pokoj 2">
-					<div class="room__description">
-						<h2>Romantické podkrovní apartmá</h2>
-						<p>Supervulkánu i použitelnost laura nejlepší starým viru s duší ať vykreslují, mi ji zhruba dolů pomezí zaledněné, vztahů vedený probíhající výrazně, vousy obratlovců: program po šest ohromného všemi vykonanou volně pepře myšlenkami pohromou, přitom mé používání zeslabení soudy vrstvě k nemoc tomuto podobná, dle mi pralesa.</p>
-						<button class="button">Rezervovat - 2500 Kč/noc</button>
-					</div>
-				</div>
-
-				<div class="room">
-					<img class="room__image" src="/images/room3.jpg" alt="Pokoj 3">
-					<div class="room__description">
-						<h2>Ekonomický pokoj pro dva</h2>
-						<p>Jejím loňský nebyly afriky výkyvy příčinou i realitu draka často u výsluní likvidaci návrat traektorii městský. Až ne vlek využívá hry vše, zimních výhradně s spojeného tvrdí, k jižních vylepšování vystavení. Rozptylují v žijí migrační oceán dokument na planety dopředu soužití z míst s pamětníkům matematiky.</p>
-						<button class="button">Rezervovat - 950 Kč/noc</button>
-					</div>
-				</div>
-			</section>
-			<!-- konec .rooms -->
-
-
+	<footer class="footer">
+		<div class="footer__column">
+			<h4>Obce v okolí</h4>
+			<ul>
+				<li>Vesnička pod Horou</li>
+				<li>Stará Osada</li>
+				<li>Kamenný Mlýn</li>
+				<li>Horní Vesnice</li>
+				<li>Slunečný Dvůr</li>
+				<li>Jezerní Město</li>
+			</ul>
+		</div>
+		<div class="footer__column">
+			<h4>Tipy na výlety</h4>
+			<ul>
+				<li>Horská pevnost</li>
+				<li>Projížďka po jezeře</li>
+				<li>Skalní město</li>
+				<li>Solná jeskyně</li>
+				<li>Lanovkou na vrchol</li>
+				<li>Na kole okolo jezera</li>
+			</ul>
+		</div>
+		<div class="footer__column">
+			<h4>Kontakt</h4>
+			<p>Telefon:<br />+420 123 456 789</p>
+			<p>
+				E-mail:<br />
+				<a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
+			</p>
+		</div>
+	</footer>
+</body>
+</html>

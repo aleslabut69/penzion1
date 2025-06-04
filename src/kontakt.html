@@ -1,73 +1,198 @@
----
-layout: main.njk
-title: Kontakt
----
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .contact {
+      padding: 60px;
+      background-color: #f7f7f7;
+    }
 
+    .contact__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
 
-			<!-- Galerie -->
-			<section class="contact">
+    .contact__grid-item {
+      flex: 1 1 400px;
+    }
 
-				<div class="contact__grid">
-					<div class="contact__grid-item">
-						<h1>Kontakt</h1>
+    .contact h1,
+    .contact h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
 
-						<p>Máte-li jakýkoli dotaz ohledně vaší rezervace, neváhejte kontaktovat naše rezervační oddělení. Využít můžete buď kontaktní formulář níže na stránce nebo nám zavolejte nebo napište email.</p>
+    .contact p {
+      line-height: 1.6;
+    }
 
-						<h2 class="contact__title">Adresa penzionu</h2>
+    .contact a {
+      color: #0077cc;
+      text-decoration: none;
+    }
 
-						<p>
-							<strong>Penzion u vody</strong><br>
-							Ulice 42<br>
-							9887 65 Městečko
-						</p>
+    .form-field {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
 
-						<h2 class="contact__title">Recepce a rezervace</h2>
+    .form-field input,
+    .form-field textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
 
-						<p>
-							<strong>Telefon:</strong> +420 123 456 789<br>
-							<strong>E-mail:</strong> <a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
-						</p>
-					</div>
+    .form-field label {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
 
-					<div class="contact__grid-item">
+    .required::after {
+      content: " *";
+      color: red;
+    }
 
-						<h2>Kontaktní formulář</h2>
+    .button {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-						<form action="" method="post">
+    .button:hover {
+      background-color: #005fa3;
+    }
 
-							<div class="form-field">
-								<label for="jmeno" class="required">Jméno a příjmení</label>
-								<input type="text" name="jmeno" id="jmeno" required>
-							</div>
+    .map iframe {
+      border: none;
+      width: 100%;
+      height: 450px;
+      display: block;
+    }
 
-							<div class="form-field">
-								<label for="email" class="required">E-mail</label>
-								<input type="email" name="email" id="email" required>
-							</div>
+    @media (max-width: 768px) {
+      .contact {
+        padding: 40px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__contact">
+      <a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a> &nbsp; Tel. +420 123 456 789
+    </div>
+  </header>
 
-							<div class="form-field">
-								<label for="telefon">Telefon</label>
-								<input type="tel" name="telefon" id="telefon">
-							</div>
+  <div class="header">
+    <div class="header__title">
+      <h1>Penzion u vody</h1>
+      <p class="stars">★★★</p>
+      <p>Ulice 42, Městečko</p>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Úvod</a>
+      <a href="pokoje.html">Pokoje</a>
+      <a href="vybaveni.html">Vybavení</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </div>
 
-							<div class="form-field">
-								<label for="zprava" class="required">Zpráva</label>
-								<textarea name="zprava" id="zprava" rows="6" required></textarea>
-							</div>
+  <hr>
 
-							<button class="button" type="submit">Odeslat zprávu</button>
+  <section class="contact">
+    <div class="contact__grid">
+      <div class="contact__grid-item">
+        <h1>Kontakt</h1>
+        <p>Máte-li jakýkoli dotaz ohledně vaší rezervace, neváhejte kontaktovat naše rezervační oddělení. Využít můžete buď kontaktní formulář níže na stránce nebo nám zavolejte nebo napište email.</p>
 
-						</form>
+        <h2 class="contact__title">Adresa penzionu</h2>
+        <p>
+          <strong>Penzion u vody</strong><br>
+          Ulice 42<br>
+          9887 65 Městečko
+        </p>
 
-					</div>
-				</div>
+        <h2 class="contact__title">Recepce a rezervace</h2>
+        <p>
+          <strong>Telefon:</strong> +420 123 456 789<br>
+          <strong>E-mail:</strong> <a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a>
+        </p>
+      </div>
 
-			</section>
-			<!-- konec .contact -->
+      <div class="contact__grid-item">
+        <h2>Kontaktní formulář</h2>
+        <form action="" method="post">
+          <div class="form-field">
+            <label for="jmeno" class="required">Jméno a příjmení</label>
+            <input type="text" name="jmeno" id="jmeno" required>
+          </div>
 
+          <div class="form-field">
+            <label for="email" class="required">E-mail</label>
+            <input type="email" name="email" id="email" required>
+          </div>
 
-			<section class="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86108.11109072906!2d13.618535884116946!3d47.58960582362411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4771366f6e414663%3A0x16c165596a26c1ad!2sHallstatt%2C%20Rakousko!5e0!3m2!1scs!2scz!4v1619614092892!5m2!1scs!2scz" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-			</section>
-			<!-- konec .map -->
-	
+          <div class="form-field">
+            <label for="telefon">Telefon</label>
+            <input type="tel" name="telefon" id="telefon">
+          </div>
+
+          <div class="form-field">
+            <label for="zprava" class="required">Zpráva</label>
+            <textarea name="zprava" id="zprava" rows="6" required></textarea>
+          </div>
+
+          <button class="button" type="submit">Odeslat zprávu</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86108.11109072906!2d13.618535884116946!3d47.58960582362411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4771366f6e414663%3A0x16c165596a26c1ad!2sHallstatt%2C%20Rakousko!5e0!3m2!1scs!2scz!4v1619614092892!5m2!1scs!2scz" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__column">
+      <h4>Obce v okolí</h4>
+      <ul>
+        <li>Vesnička pod Horou</li>
+        <li>Stará Osada</li>
+        <li>Kamenný Mlýn</li>
+        <li>Horní Vesnice</li>
+        <li>Slunečný Dvůr</li>
+        <li>Jezerní Město</li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h4>Tipy na výlety</h4>
+      <ul>
+        <li>Horská pevnost</li>
+        <li>Projížďka po jezeře</li>
+        <li>Skalní město</li>
+        <li>Solná jeskyně</li>
+        <li>Lanovkou na vrchol</li>
+        <li>Na kole okolo jezera</li>
+      </ul>
+    </div>
+    <div class="footer__column">
+      <h4>Kontakt</h4>
+      <p>Telefon:<br>+420 123 456 789</p>
+      <p>E-mail:<br><a href="mailto:penzion@uvody.cz">penzion@uvody.cz</a></p>
+    </div>
+  </footer>
+</body>
+</html>
